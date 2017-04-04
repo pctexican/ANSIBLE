@@ -1,0 +1,21 @@
+**LINEINFILE**
+
+http://docs.ansible.com/ansible/lineinfile_module.html
+
+~/PC$ cat lineinfile.yml
+---
+ - hosts: all
+   become: yes
+
+   tasks:
+
+     # Security limits file
+     - name: Add nofiles entries to limits
+       lineinfile: dest=/etc/security/limits.conf state=present line='*      hard   nofile          65535'
+
+     - name: Add nofiles entries to limits
+       lineinfile: dest=/etc/security/limits.conf state=present line='*      soft   nofile          65535'
+
+CALL THE MODULE:
+
+~/PC$ ansible-playbook  -i ../ansible-inventory/sndy-a -l storage lineinfile.yml
