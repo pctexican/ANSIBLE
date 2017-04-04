@@ -1,0 +1,14 @@
+setlimits.yml
+---
+ - hosts: all
+#   remote_user: root
+   become: yes
+
+   tasks:
+
+     # Security limits file
+     - name: Add nofiles entries to limits
+       lineinfile: dest=/etc/security/limits.conf state=present line='*      hard   nofile          65535'
+
+     - name: Add nofiles entries to limits
+       lineinfile: dest=/etc/security/limits.conf state=present line='*      soft   nofile          65535'
