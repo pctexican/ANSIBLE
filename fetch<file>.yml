@@ -1,0 +1,9 @@
+piops@cldadm-wc-a01:~/PC$ cat fetchceph-conf.yml
+#- name: Fetch the ceph.conf file
+# src = source explicit path/FILE
+# dest = destination FOLDER
+- hosts: all
+  become: yes
+  tasks:
+  - name: Copy the ceph.conf file from remotehost to local
+    fetch: src=/etc/ceph/ceph.conf dest=/home/piops/AUDIT
