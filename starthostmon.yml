@@ -1,0 +1,16 @@
+piops@cldadm-wc-a01:~/PC$ cat starthostmon.yml
+#- name: Check if Hostmon is running
+#  command: systemctl status hostmon
+#  register: result
+#- name: what happened?
+#  debug: var=result
+- hosts: cephosds
+  become: yes
+  tasks:
+  - name: storagenode status
+    service: name=hostmon state=started
+- hosts: cephmons
+  become: yes
+  tasks:
+  - name: cephmons status
+    service: name=hostmon state=started
