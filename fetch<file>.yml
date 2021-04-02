@@ -1,4 +1,4 @@
-piops@cldadm-wc-a01:~/PC$ cat fetchceph-conf.yml
+piops@unixadminhost:~/PC$ cat fetchceph-conf.yml
 #- name: Fetch the ceph.conf file
 # src = source explicit path/FILE
 # dest = destination FOLDER
