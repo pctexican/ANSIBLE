@@ -18,4 +18,4 @@ http://docs.ansible.com/ansible/lineinfile_module.html
 
 CALL THE MODULE:
 
-~/PC$ ansible-playbook  -i ../ansible-inventory/sndy-a -l storage lineinfile.yml
+~/PC$ ansible-playbook  -i ../ansible-inventory/site-A -l storage lineinfile.yml
