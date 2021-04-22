@@ -1,4 +1,4 @@
-piops@cldadm-wc-a01:~/PC$ cat starthostmon.yml
+piops@adminnode:~/PC$ cat starthostmon.yml
 #- name: Check if Hostmon is running
 #  command: systemctl status hostmon
 #  register: result
